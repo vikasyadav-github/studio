@@ -67,7 +67,7 @@ async function loadStatic(){
 				
 				staticObj.srcset += url + " " + set.width + "w";
 				
-				set.height = set.height || ((set.width * 3 / 4)|0);
+				set.height = set.height || ((set.width * 2 / 3)|0);
 				
 				var tmpFilename = tempy.file({ extension: ext });
 				
