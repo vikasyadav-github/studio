@@ -9,8 +9,6 @@ const tempy = require('tempy');
 
 const app = express();
 
-const template = Handlebars.compile(fs.readFileSync(__dirname + "/template.html", "utf8"));
-
 var games = [];
 var staticURL = {};
 
@@ -24,6 +22,15 @@ async function init(){
 	console.log("Listening");
 	app.listen(process.env["M28N_SERVER_ID"] ? 80 : 8080);
 }
+
+var template = null;
+function getTemplate(){
+	if(process.env["DEBUG"]) template = null;
+	if(template == null) template = Handlebars.compile(fs.readFileSync(__dirname + "/template.html", "utf8"));
+	return template;
+}
+
+getTemplate(); // Force fetching template
 
 async function loadStatic(){
 	var dir = (__dirname + "/static/").replace(/\\/g, "/");
@@ -137,7 +144,7 @@ app.get("/", simpleHandler(async function(req){
 		return a.sortOrder - b.sortOrder;
 	})
 	
-	return template({
+	return getTemplate()({
 		games: games,
 	});
 }));
