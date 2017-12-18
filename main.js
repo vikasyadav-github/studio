@@ -115,10 +115,10 @@ async function loadData(){
 
 app.get("/", simpleHandler(async function(req){
 	var cardClasses = [
-		"card-outline-primary",
-		"card-outline-success",
-		"card-outline-warning",
-		"card-outline-danger",
+		"card-1",
+		"card-2",
+		"card-3",
+		"card-4",
 	];
 	
 	var btnClasses = [

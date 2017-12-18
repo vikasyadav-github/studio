@@ -19,65 +19,75 @@
 			width: 100%;
 		}
 		
-		.m28-first-party.card .card-block::after {
-			content: '';
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 0 15px 15px;
+		
+		.game-container {
+			padding-right: 5px;
+			padding-left: 5px;
+			height: 257px;
 		}
 		
-		.game.card {
+		.game .card-img-top {
+			border-radius: 5px;
+			
 			position: relative;
-			padding-top: 66.66%;
-			margin-bottom: .6666rem;
+			transform: none;
+			box-shadow: none;
+			border: 1px solid #333;
 		}
 		
-		.game.card .card-img-top {
-			position: absolute;
-			left: 0;
-			top: 0;
-			border-bottom-width: 1px;
-			border-bottom-style: solid;
+		.game {
+			border: none;
+			
+			z-index: 0;
+			transition: all 0.3s ease;
 		}
 		
-		.card-block {
-			padding: 0.75rem;
+		.game:hover {
+			z-index: 20;
 		}
 		
-		.card-outline-primary .card-img-top {
-			border-bottom-color: #0275d8;
+		.card-desc {
+			background-color: #333;
+			color: #FFF;
+			border-radius: 5px 5px;
+			
+			transition: all 0.3s ease;
 		}
 		
-		.card-outline-success .card-img-top {
-			border-bottom-color: #5cb85c;
+		
+		.game:hover .card-desc {
+			padding: 10px;
+			box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+			transform: scale(1.1);
 		}
 		
-		.card-outline-warning .card-img-top {
-			border-bottom-color: #f0ad4e;
+		.card-desc-spacer {
+			width: 100%;
+			height: 100%;
 		}
 		
-		.card-outline-danger .card-img-top {
-			border-bottom-color: #d9534f;
+		.card-text {
+			max-height: 0px;
+			padding: 0;
+			opacity: 0.0;
+			
+			transition: all 0.2s ease;
 		}
 		
-		.m28-first-party.card-outline-primary .card-block::after {
-			border-color: transparent transparent #0275d8 transparent;
+		.game:hover .card-text {
+			max-height: 500px;
+			padding: 5px;
+			opacity: 1.0;
 		}
 		
-		.m28-first-party.card-outline-success .card-block::after {
-			border-color: transparent transparent #5cb85c transparent;
+		.m28-first-party .card-img-top {
+			border-color: #d9534f !important;
+			border-width: 1px;
+			transition: all 0.2s ease;
 		}
 		
-		.m28-first-party.card-outline-warning .card-block::after {
-			border-color: transparent transparent #f0ad4e transparent;
-		}
-		
-		.m28-first-party.card-outline-danger .card-block::after {
-			border-color: transparent transparent #d9534f transparent;
+		.game:hover.m28-first-party .card-img-top {
+			border-width: 2px;
 		}
 		
 		.play-button {
@@ -107,14 +117,14 @@ ga('send', 'pageview');
 	
 	<hr/>
 	
-	<div class="card-columns">
+	<div class="row">
 		{{#games}}
-			<div class="game card {{cardClass}}">
-				<a target="_blank" href="{{href}}"><img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{name}}" sizes="355px"></a>
-				<div class="card-block">
-					<a target="_blank" href="{{href}}" class="play-button btn {{btnClass}}">Play</a>
-					<!--<h4 class="card-title">{{name}}</h4>-->
-					<p class="card-text">{{caption}}</p>
+			<div class="game-container col-sm-4">
+				<div class="game card {{cardClass}}">
+					<div class="card-desc">
+						<a target="_blank" href="{{href}}"><img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{name}}" sizes="355px"></a>
+						<p class="card-text">{{caption}}</p>
+					</div>
 				</div>
 			</div>
 		{{/games}}
@@ -124,17 +134,12 @@ ga('send', 'pageview');
 	
 	<center>
 	<small class="text-muted">
-		Games made by us are marked with a triangle in the corner, others are games we love
+		Games made by us are marked with a red border, others are games we love
 		&sdot;
 		<a href="https://github.com/Matheus28/studio">source</a>
 	</small>
 	</center>
 </div>
 
-<!--
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
--->
 </body>
 </html>
