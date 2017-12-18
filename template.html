@@ -23,7 +23,33 @@
 		.game-container {
 			padding-right: 5px;
 			padding-left: 5px;
-			height: 257px;
+			margin-bottom: 20px;
+			height: auto;
+		}
+		
+		@media (min-width: 576px) {
+			.game-container {
+				margin-bottom: 0px;
+				height: 185px;
+			}
+		}
+		
+		@media (min-width: 768px) {
+			.game-container {
+				height: 165px;
+			}
+		}
+		
+		@media (min-width: 992px) {
+			.game-container {
+				height: 220px;
+			}
+		}
+		
+		@media (min-width: 1200px) {
+			.game-container {
+				height: 257px;
+			}
 		}
 		
 		.game .card-img-top {
@@ -37,7 +63,7 @@
 		
 		.game {
 			border: none;
-			
+			position: relative;
 			z-index: 0;
 			transition: all 0.3s ease;
 		}
@@ -119,8 +145,8 @@ ga('send', 'pageview');
 	
 	<div class="row">
 		{{#games}}
-			<div class="game-container col-sm-4">
-				<div class="game card {{cardClass}}">
+			<div class="game-container col-sm-6 col-md-4">
+				<div class="game {{cardClass}}">
 					<div class="card-desc">
 						<a target="_blank" href="{{href}}"><img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{name}}" sizes="355px"></a>
 						<p class="card-text">{{caption}}</p>
