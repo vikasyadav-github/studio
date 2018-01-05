@@ -16,17 +16,19 @@ You need a 1200x800 png image (goes in /static/images/), plus a data file (goes 
 
 The contents of the data file need to be the following (don't include the comments):
 
-    {
-    	"name": "Game name",
-    	"href": "Game URL (starting with http:// or https://, prefer https if your game supports it)",
-    	"image": "images/<your image file>.png",
-    	"caption": "Enter your caption here, short and in a neutral tone. See other games for examples",
-      
-    	// Only include if you are linking back to m28.studio (optional).
-    	// If you change your mind please submit a pull request changing this
-    	"hasLinkBack": true
-    }
-    
+```javascript
+{
+	"name": "Game name",
+	"href": "Game URL (starting with http:// or https://, prefer https if your game supports it)",
+	"image": "images/<your image file>.png",
+	"caption": "Enter your caption here, short and in a neutral tone. See other games for examples",
+  
+	// Only include if you are linking back to m28.studio (optional).
+	// If you change your mind please submit a pull request changing this
+	"hasLinkBack": true
+}
+```
+
 If you'd like to update any data or images related to your game please submit a pull request.
 
 ## Do I need to link back to m28.studio?
