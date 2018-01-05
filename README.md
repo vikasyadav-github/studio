@@ -22,8 +22,8 @@ The contents of the data file need to be the following (don't include the commen
     	"image": "images/<your image file>.png",
     	"caption": "Enter your caption here, short and in a neutral tone. See other games for examples",
       
-      // Only include if you are linking back to m28.studio (optional).
-      // If you change your mind please submit a pull request changing this
+    	// Only include if you are linking back to m28.studio (optional).
+    	// If you change your mind please submit a pull request changing this
     	"hasLinkBack": true
     }
     
