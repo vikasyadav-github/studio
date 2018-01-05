@@ -26,6 +26,8 @@ The contents of the data file need to be the following (don't include the commen
       // If you change your mind please submit a pull request changing this
     	"hasLinkBack": true
     }
+    
+If you'd like to update any data or images related to your game please submit a pull request.
 
 ## Do I need to link back to m28.studio?
 
