@@ -14,6 +14,8 @@ Remember that the vetting process is pretty rigorous, it's essentially done by [
 
 You need a 1200x800 png image (goes in /static/images/), plus a data file (goes in /data/).
 
+**Please make sure you have [Git LFS](https://git-lfs.github.com/) installed**
+
 The contents of the data file need to be the following (don't include the comments):
 
 ```javascript
