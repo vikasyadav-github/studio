@@ -78,7 +78,7 @@ async function loadStatic(){
 				
 				var tmpFilename = tempy.file({ extension: ext });
 				
-				var buf = await sharp(filename).resize(set.width, set.height).crop().toFile(tmpFilename);
+				var buf = await sharp(filename).resize(set.width, set.height).toFile(tmpFilename);
 				app.get(url, function(req, res){
 					res.sendFile(tmpFilename);
 				});
