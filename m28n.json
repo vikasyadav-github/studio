@@ -7,7 +7,11 @@
 	"shutdownTimeout": 30,
 	"updateKeepAliveMin": 2,
 	"updateKeepAliveMax": 5,
-	"serverSize": 0,
+	"serverSize": {
+		"cpus": 1,
+		"ram": 0.5,
+		"transfer": 0.5
+	},
 	"endpointBehaviorOnUpdate": "clear",
 	
 	"run": "chmod +x run.sh && ./run.sh",
