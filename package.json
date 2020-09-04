@@ -5,7 +5,7 @@
 	"dependencies": {
 		"express": "^4.15.3",
 		"fs-extra": "^4.0.1",
-		"handlebars": "^4.0.10",
+		"handlebars": "^4.5.3",
 		"recursive-readdir": "^2.2.1",
 		"sharp": "^0.22.1",
 		"tempy": "^0.1.0"
